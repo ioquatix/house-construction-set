@@ -9,7 +9,7 @@ module clip(size = 20) {
 	render() rotate([180, -90, 0]) difference() {
 		union() {
 			cylinder(r=radius+thickness, h=size);
-			translate([-half/2, 0, 0]) zcube([half, half*2, size]);
+			translate([-half/2, 0, 0]) zcube([half, half*2-thickness, size]);
 		}
 		
 		cylinder_inner(size, radius);
